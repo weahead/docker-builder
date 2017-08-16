@@ -1,6 +1,6 @@
 FROM docker:git
 
-RUN apk --no-cache add jq
+RUN apk --no-cache add jq openssl
 
 ENV DOCKER_DRIVER=overlay
 
@@ -15,14 +15,14 @@ RUN set -x \
   && rm glibc-$GLIBC.apk \
   && ln -s /lib/libz.so.1 /usr/glibc-compat/lib/ \
   && ln -s /lib/libc.musl-x86_64.so.1 /usr/glibc-compat/lib \
-  && curl -fsSL "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" > /usr/local/bin/docker-compose \
+  && wget -q -O /usr/local/bin/docker-compose "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" \
   && chmod +x /usr/local/bin/docker-compose \
   && docker-compose -v
 
 ENV RANCHER_CLI_VERSION 0.6.3
 
 RUN set -x \
-  && curl -fsSL "https://github.com/rancher/cli/releases/download/v${RANCHER_CLI_VERSION}/rancher-linux-amd64-v${RANCHER_CLI_VERSION}.tar.xz" | tar -C / -xJ \
+  && wget -q -O- "https://github.com/rancher/cli/releases/download/v${RANCHER_CLI_VERSION}/rancher-linux-amd64-v${RANCHER_CLI_VERSION}.tar.xz" | tar -C / -xJ \
   && mv /rancher-v${RANCHER_CLI_VERSION}/rancher /usr/local/bin/ \
   && rm -rf /rancher-v${RANCHER_CLI_VERSION} \
   && rancher -v
