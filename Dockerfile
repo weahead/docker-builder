@@ -19,7 +19,7 @@ RUN set -x \
   && chmod +x /usr/local/bin/docker-compose \
   && docker-compose -v
 
-ENV RANCHER_CLI_VERSION 0.5.0
+ENV RANCHER_CLI_VERSION 0.6.3
 
 RUN set -x \
   && curl -fsSL "https://github.com/rancher/cli/releases/download/v${RANCHER_CLI_VERSION}/rancher-linux-amd64-v${RANCHER_CLI_VERSION}.tar.xz" | tar -C / -xJ \
