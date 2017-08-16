@@ -1,6 +1,6 @@
 FROM docker:git
 
-RUN apk --no-cache add jq curl openssl
+RUN apk --no-cache add jq openssl
 
 ENV DOCKER_DRIVER=overlay
 
@@ -22,7 +22,7 @@ RUN set -x \
 ENV RANCHER_CLI_VERSION 0.6.3
 
 RUN set -x \
-  && curl -fsSL "https://github.com/rancher/cli/releases/download/v${RANCHER_CLI_VERSION}/rancher-linux-amd64-v${RANCHER_CLI_VERSION}.tar.xz" | tar -C / -xJ \
+  && wget -q -O- "https://github.com/rancher/cli/releases/download/v${RANCHER_CLI_VERSION}/rancher-linux-amd64-v${RANCHER_CLI_VERSION}.tar.xz" | tar -C / -xJ \
   && mv /rancher-v${RANCHER_CLI_VERSION}/rancher /usr/local/bin/ \
   && rm -rf /rancher-v${RANCHER_CLI_VERSION} \
   && rancher -v
