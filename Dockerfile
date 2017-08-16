@@ -1,6 +1,7 @@
 FROM docker:git
 
-RUN apk --no-cache add jq
+RUN apk --no-cache add jq 
+RUN apk add --update openssl
 
 ENV DOCKER_DRIVER=overlay
 
