@@ -1,6 +1,6 @@
 FROM docker:git
 
-RUN apk --no-cache add jq openssl
+RUN apk --no-cache add jq openssl curl
 
 ENV DOCKER_DRIVER=overlay
 
