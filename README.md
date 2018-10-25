@@ -7,8 +7,9 @@ This container includes:
 
 - [Node.js](https://nodejs.org/)
 - [Docker](https://www.docker.com/)
-- [Git](https://git-scm.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
 - [Rancher CLI](https://github.com/rancher/cli)
+- [Git](https://git-scm.com/)
 - [cURL](https://curl.haxx.se/)
 - [jq](https://stedolan.github.io/jq/)
 
