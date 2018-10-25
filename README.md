@@ -5,9 +5,10 @@
 
 This container includes:
 
+- [Node.js](https://nodejs.org/)
 - [Docker](https://www.docker.com/)
 - [Git](https://git-scm.com/)
-- [Rancher CLI](https://github.com/rancher/cli) - [documentation](https://docs.rancher.com/rancher/v1.2/en/cli/)
+- [Rancher CLI](https://github.com/rancher/cli)
 - [cURL](https://curl.haxx.se/)
 - [jq](https://stedolan.github.io/jq/)
 
