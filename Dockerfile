@@ -5,6 +5,7 @@ ENV DOCKER_DRIVER=overlay2
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories \
     && echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
     && apk --no-cache add \
+      curl \
       git \
       jq \
       openssl \
