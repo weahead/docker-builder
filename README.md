@@ -6,6 +6,7 @@
 This container includes:
 
 - [Node.js](https://nodejs.org/)
+- [Now.sh CLI](https://github.com/zeit/now-cli)
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 - [Rancher CLI](https://github.com/rancher/cli)

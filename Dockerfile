@@ -10,7 +10,8 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repos
       jq \
       openssl \
       docker \
-      docker-compose
+      docker-compose \
+    && npm install -g now --silent
 
 COPY --from=rancher/cli:v0.6.10 /usr/bin/rancher /usr/local/bin/rancher
 
