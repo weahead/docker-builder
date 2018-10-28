@@ -11,7 +11,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repos
       openssl \
       docker \
       docker-compose \
-    && npm install -g now --silent
+    && npm install -g --unsafe-perm --silent now
 
 COPY --from=rancher/cli:v0.6.10 /usr/bin/rancher /usr/local/bin/rancher
 
