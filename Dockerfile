@@ -10,8 +10,11 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repos
       jq \
       openssl \
       docker \
-      docker-compose \
-    && npm install -g --unsafe-perm --silent now
+      docker-compose
+
+ENV NOW_VERSION=12.1.9
+
+RUN npm install -g --unsafe-perm --silent now@${NOW_VERSION}
 
 COPY --from=rancher/cli:v0.6.10 /usr/bin/rancher /usr/local/bin/rancher
 
