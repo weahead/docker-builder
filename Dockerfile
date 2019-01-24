@@ -12,7 +12,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repos
       docker \
       docker-compose
 
-ENV NOW_VERSION=12.1.9
+ENV NOW_VERSION=13.1.2
 
 RUN npm install -g --unsafe-perm --silent now@${NOW_VERSION}
 
