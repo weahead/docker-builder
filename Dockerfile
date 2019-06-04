@@ -12,9 +12,8 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repos
       docker \
       docker-compose
 
-ENV NOW_VERSION=15.0.1
+ENV NOW_VERSION=15.0.3
 
 RUN npm install -g --unsafe-perm --silent now@${NOW_VERSION}
 
 COPY --from=rancher/cli:v0.6.10 /usr/bin/rancher /usr/local/bin/rancher
-
