@@ -1,4 +1,4 @@
-FROM node:10.15.3-alpine
+FROM node:8.16.0-alpine
 
 ENV DOCKER_DRIVER=overlay2
 
