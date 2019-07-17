@@ -11,7 +11,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
       docker \
       docker-compose
 
-ENV NOW_VERSION=15.3.0
+ENV NOW_VERSION=15.8.0
 
 RUN npm install -g --unsafe-perm --silent now@${NOW_VERSION}
 
