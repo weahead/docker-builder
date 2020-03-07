@@ -10,7 +10,7 @@ RUN apk --no-cache add \
       docker \
       docker-compose
 
-ENV NOW_VERSION=15.3.0
+ENV NOW_VERSION=17.0.4
 
 RUN npm install -g --unsafe-perm --silent now@${NOW_VERSION}
 
