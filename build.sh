@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build -t weahead/builder:latest .
+docker build --pull -t weahead/builder:latest .
