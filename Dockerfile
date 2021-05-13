@@ -16,4 +16,4 @@ ENV VERCEL_VERSION=22.0.1
 
 RUN yarn global add vercel@${VERCEL_VERSION}
 
-COPY --from=rancher/cli:v0.6.10 /usr/bin/rancher /usr/local/bin/rancher
+COPY --from=rancher/cli:v0.6.14 /usr/bin/rancher /usr/local/bin/rancher
