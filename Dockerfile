@@ -12,8 +12,8 @@ RUN apk --no-cache add \
       docker \
       docker-compose
 
-ENV NOW_VERSION=15.3.0
+ENV VERCEL_VERSION=22.0.1
 
-RUN npm install -g --unsafe-perm --silent now@${NOW_VERSION}
+RUN yarn global add vercel@${VERCEL_VERSION}
 
 COPY --from=rancher/cli:v0.6.10 /usr/bin/rancher /usr/local/bin/rancher
