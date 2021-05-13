@@ -1,5 +1,7 @@
 FROM node:14.17.0-alpine
 
+LABEL maintainer="We ahead AB <all@weahead.se>"
+
 ENV DOCKER_DRIVER=overlay2
 
 RUN apk --no-cache add \
