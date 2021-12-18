@@ -1,4 +1,4 @@
-FROM node:14.17.0-alpine
+FROM node:16.13.1-alpine
 
 LABEL maintainer="We ahead AB <all@weahead.se>"
 
